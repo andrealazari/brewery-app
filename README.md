@@ -3,7 +3,7 @@
 ## Summary of Project
 
 Full-stack database backed application for locate and save breweries.
-API from [Beer Mapping](https://beermapping.com/api/).
+API from [Beer Mapping](https://beermapping.com/api/) or [Open Brewery DB](https://www.openbrewerydb.org/d).
 
 ## Plan
 
@@ -18,5 +18,5 @@ API from [Beer Mapping](https://beermapping.com/api/).
 
 ## Extra functionality
 
-- Add to visit/visited option
 - Add comments to your visited breweries
+- Add a section to see other users breweries
