@@ -1,10 +1,24 @@
 <h1>Find Brewery</h1>
 
 <form action="">
-    <label for="">Brewery Location:</label>
-    <input type="text" name="location">
+    <label for="">Brewery Name:</label>
+    <input type="text" name="name">
 
     <button>Search</button>
 </form>
 
-<p><%= brewery_info %></p>
+<% brewery_info.each do |brewery| %>
+
+    <p><%= brewery['name'] %></p>
+    <p><%= brewery['brewery_type'] %></p>
+    <p><%= brewery['street'] %></p>
+    <p><%= brewery['city'] %></p>
+    <p><%= brewery['state'] %></p>
+    <p><%= brewery['country'] %></p>
+    <p><%= brewery['website'] %></p>
+    <form action="/breweries/add" method="POST">
+        <textarea name="comments" id="" cols="30" rows="2" placeholder="Add a comment"></textarea>
+        <button>Add</button>
+    </form>
+    <%# <a href="/breweries/add">Add to my list</a> %>
+<% end %>
