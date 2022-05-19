@@ -10,7 +10,7 @@ post '/sessions' do
 
     if user && BCrypt::Password.new(user['password_digest']) == password
         session['user_id'] = user['id']
-        redirect '/'
+        redirect '/breweries/my_page'
     end
 end
 

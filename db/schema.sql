@@ -14,8 +14,11 @@ CREATE TABLE breweries(
     name TEXT,
     brewery_type TEXT,
     street TEXT,
+    city TEXT,
     state TEXT,
     country TEXT,
     website TEXT,
-    comment TEXT
-)
+    rate INT,
+    comments TEXT,
+    user_id INT
+);

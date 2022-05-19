@@ -17,8 +17,23 @@
     <p><%= brewery['country'] %></p>
     <p><%= brewery['website'] %></p>
     <form action="/breweries/add" method="POST">
-        <textarea name="comments" id="" cols="30" rows="2" placeholder="Add a comment"></textarea>
+        <input type="hidden" name="name" value="<%= brewery['name'] %>">
+        <input type="hidden" name="brewery_type" value="<%= brewery['brewery_type'] %>">
+        <input type="hidden" name="street" value="<%= brewery['street'] %>">
+        <input type="hidden" name="city" value="<%= brewery['city'] %>">
+        <input type="hidden" name="state" value="<%= brewery['state'] %>">
+        <input type="hidden" name="country" value="<%= brewery['country'] %>">
+        <input type="hidden" name="website" value="<%= brewery['website'] %>">
+        <label for="">Rate:</label>
+        <select name="rate">
+            <option value="5">5</option>
+            <option value="6">6</option> 
+            <option value="7">7</option> 
+            <option value="8">8</option> 
+            <option value="9">9</option> 
+            <option value="10">10</option>     
+        </select>
+        <textarea name="comments" cols="30" rows="2" placeholder="Add a comment"></textarea>
         <button>Add</button>
     </form>
-    <%# <a href="/breweries/add">Add to my list</a> %>
 <% end %>
