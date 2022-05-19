@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Sora', sans-serif;
+    /* background-image: url(https://img.freepik.com/free-vector/beer-glasses-seamless-pattern-with-different-kinds-glasses-pulled-light-beers-malts-hand-drawing-white_1284-49325.jpg?t=st=1652957459~exp=1652958059~hmac=720dcd8479660f83cf10dbfdc2c14eaf6f7aae24054ee47f8789ca78b0d9a038&w=740); */
 }
 
 .container-flex {
@@ -20,12 +21,17 @@ body {
 /* INDEX SECTION */
 .index {
     width: 30%;
+    padding: 50px 0;
+    background-color: #263145;
+    border-radius: 15px;
 }
 
 .index h1 {
     font-size: 50px;
     text-align: center;
     margin-bottom: 30px;
+    color: white;
+    text-shadow: 1px 1px #f8bb32;
 }
 
 .index-links {
@@ -37,8 +43,8 @@ body {
 .index a {
     text-decoration: none;
     text-align: center;
-    color: black;
-    background-color: rgb(247, 194, 3);
+    color: #263145;
+    background-color: #f8bb32;
     padding: 0.5rem 1rem;
     border-radius: 3px;
     font-size: 20px;
@@ -47,14 +53,19 @@ body {
 
 /* SIGN-UP / LOGIN SECTION */
 .sign-up, 
-.login {
-    width: 50%;
+.login{
+    width: 30%;
     text-align: center;
+    background-color: #263145;
+    color: #f8bb32;
+    padding-top: 20px;
+    border-radius: 15px;
 }
 
 .sign-up form, 
 .login form ,
-.search form{
+.search form,
+.edit form{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -66,7 +77,8 @@ body {
 
 .sign-up input, 
 .login input,
-.search input {
+.search input,
+.edit input {
     font-size: 15px;
     text-align: center;
     padding: 5px 0;
@@ -74,7 +86,8 @@ body {
 
 .sign-up button, 
 .login button,
-.search button {
+.search button,
+.edit button {
     margin: 20px auto;
     text-align: center;
     padding: 0.5rem 2rem;
@@ -85,25 +98,27 @@ body {
 
 /* MY PAGE SECTION */
 
-/* .my-page {
-    height: 100vh;
-} */
-
 .my-page header,
 .feed header,
-.search header {
+.search header,
+.edit header {
     text-align: center;
+    background-color: #263145;
+    color: #f8bb32;
+    padding: 30px 0;
 }
 
 .my-page nav,
 .feed nav,
-.search nav {
+.search nav,
+.edit nav {
     margin-top: 30px;
 }
 
 .my-page ul,
 .feed ul,
-.search ul {
+.search ul,
+.edit ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -112,13 +127,15 @@ body {
 
 .my-page li,
 .feed li,
-.search li {
+.search li,
+.edit li {
     list-style: none;
 }
 
 .my-page a,
 .feed a,
-.search a {
+.search a,
+.edit a {
     text-decoration: none;
     text-align: center;
     color: black;
@@ -131,17 +148,20 @@ body {
 .my-page article,
 .feed article,
 .search article {
-    border: 1px solid black;
-    padding: 20px 30px;
-    width: 300px;
-    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 50%;
+    margin: 0 auto;
 }
 
-.my-page .breweries {
-    border: 1px solid blue;
+.my-page .breweries,
+.feed .breweries {
     padding: 20px 30px;
     width: 300px;
     margin: 50px auto;
+    background-color: #263145;
+    color: #f8bb32;
 
 }
 

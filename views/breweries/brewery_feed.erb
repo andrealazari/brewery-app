@@ -18,17 +18,18 @@
 
     <article>
         <% breweries.each do |brewery| %>
-            <p>User: <%= brewery['user_name'] %></p>
-            <p><%= brewery['name'] %></p>
-            <p>Type: <%= brewery['brewery_type'] %></p>
-            <p>Street: <%= brewery['street'] %></p>
-            <p>City: <%= brewery['city'] %></p>
-            <p>State: <%= brewery['state'] %></p>
-            <p>Country: <%= brewery['country'] %></p>
-            <p>Website: <%= brewery['website'] %></p>
-            <p>Rate: <%= brewery['rate'] %></p>
-            <p>Comments: <%= brewery['comments'] %></p>
-
+            <section class="breweries">
+                <p>User: <%= brewery['user_name'] %></p>
+                <p><%= brewery['name'] %></p>
+                <p>Type: <%= brewery['brewery_type'] %></p>
+                <p>Street: <%= brewery['street'] %></p>
+                <p>City: <%= brewery['city'] %></p>
+                <p>State: <%= brewery['state'] %></p>
+                <p>Country: <%= brewery['country'] %></p>
+                <p>Website: <%= brewery['website'] %></p>
+                <p>Rate: <%= brewery['rate'] %></p>
+                <p>Comments: <%= brewery['comments'] %></p>
+            </section>
         <% end %>
     </article>
 

@@ -1,17 +1,36 @@
-<h1>Brewery App</h1>
+<section class="edit">
+        <header>
+        <h1>Brewery App</h1>
 
-<%= brewery['name']%>
-<form action="/<%= brewery['id']%>" method="POST">
-<input type="hidden" name="_method" value="put">
+        <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+        </form>
+    </header>
 
-    <select name="rate" value=<%= brewery['rate'] %>>
-        <option value="5">5</option>
-        <option value="6">6</option> 
-        <option value="7">7</option> 
-        <option value="8">8</option> 
-        <option value="9">9</option> 
-        <option value="10">10</option>     
-    </select>
-    <input type="text" name="comments" value="<%= brewery['comments'] %>">
-    <button>Update</button>
-</form>
+    <nav>
+        <ul>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/my_page">My Breweries</a></li>
+            <li><a href="/brewery_feed">Brewery Feed</a></li>
+        </ul>
+    </nav>
+
+    
+    <form action="/<%= brewery['id']%>" method="POST">
+        <input type="hidden" name="_method" value="put">
+        <%= brewery['name']%>
+
+        <select name="rate" value=<%= brewery['rate'] %>>
+            <option value="5">5</option>
+            <option value="6">6</option> 
+            <option value="7">7</option> 
+            <option value="8">8</option> 
+            <option value="9">9</option> 
+            <option value="10">10</option>     
+        </select>
+        <input type="text" name="comments" value="<%= brewery['comments'] %>">
+        <button>Update</button>
+    </form>
+
+</section>
