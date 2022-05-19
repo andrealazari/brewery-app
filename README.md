@@ -2,10 +2,19 @@
 
 ## Summary of Project
 
-Full-stack database backed application for locate and save breweries. Check out the [Brewery App](https://my-brewery-app.herokuapp.com/).
-API from [Beer Mapping](https://beermapping.com/api/) or [Open Brewery DB](https://www.openbrewerydb.org/d).
+Full-stack database backed application for locate and save breweries.<br />
 
-## Plan
+Check out the [Brewery App](https://my-brewery-app.herokuapp.com/).<br />
+
+API from [Open Brewery DB](https://www.openbrewerydb.org/d).
+
+## How it works
+
+The users can sign-up, login and logout from their accounts. Once logged in, they can search for their favourite breweries and save it to their list.<br />
+The users can add a comment and a rate.
+They can also check out other users reviews in a feed.
+
+## Plan to make the app
 
 1. Create database
 2. Create user table
@@ -15,8 +24,10 @@ API from [Beer Mapping](https://beermapping.com/api/) or [Open Brewery DB](https
 6. Add functionality for searching brewery
 7. Add functionality to add brewery to your list
 8. The API should bring some information about the brewery
+9. Display the select information
+10. The user should be able to edit and delete the selected information
+11. The user should be able to see all other users selected information
 
-## Extra functionality
+## Tech Stack
 
-- Add comments to your visited breweries
-- Add a section to see other users breweries
+Ruby, Sinatra, HTML, CSS
