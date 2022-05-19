@@ -1,7 +1,7 @@
 <h1>Brewery App</h1>
 
 <%= brewery['name']%>
-<form action="/<%= brewery['id'] %>" method="POST">
+<form action="/<%= brewery['id']%>" method="POST">
 <input type="hidden" name="_method" value="put">
 
     <select name="rate" value=<%= brewery['rate'] %>>
@@ -12,6 +12,6 @@
         <option value="9">9</option> 
         <option value="10">10</option>     
     </select>
-    <input type="text" name="comments" value=<%= brewery['comments'] %>>
+    <input type="text" name="comments" value="<%= brewery['comments'] %>">
     <button>Update</button>
 </form>

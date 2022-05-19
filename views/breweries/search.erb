@@ -1,4 +1,11 @@
 <h1>Find Brewery</h1>
+<nav>
+    <ul>
+        <li><a href="/search">Search</a></li>
+        <li><a href="/my_page">My Breweries</a></li>
+        <li><a href="/brewery_feed">Brewery Feed</a></li>
+    </ul>
+</nav>
 
 <form action="/search">
     <label for="">Brewery Name:</label>
@@ -33,7 +40,8 @@
             <option value="9">9</option> 
             <option value="10">10</option>     
         </select>
-        <textarea name="comments" cols="30" rows="2" placeholder="Add a comment"></textarea>
+        <input type="text" name="comments" placeholder="Add a comment">
+        <%# <textarea name="comments" cols="30" rows="2" placeholder="Add a comment"></textarea> %>
         <button>Add</button>
     </form>
 <% end %>

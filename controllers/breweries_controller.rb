@@ -30,7 +30,8 @@ post '/add' do
 end
 
 get '/my_page' do
-    breweries = all_breweries()
+    user_id = current_user['id']
+    breweries = all_breweries_from_current_user(user_id)
 
     erb :'/breweries/my_page', locals: {
         breweries: breweries
@@ -64,4 +65,13 @@ delete '/:id' do
     delete_brewery(id)
 
     redirect '/my_page'
+end
+
+get '/brewery_feed' do
+    user_id = current_user['id']
+    breweries = all_breweries_from_other_users(user_id)
+
+    erb :'breweries/brewery_feed', locals: {
+        breweries: breweries,
+    }
 end
