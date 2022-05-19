@@ -12,7 +12,7 @@ get '/search' do
     }
 end
 
-post '/breweries/add' do
+post '/add' do
     name = params['name']
     brewery_type = params['brewery_type']
     street = params['street']
@@ -26,13 +26,42 @@ post '/breweries/add' do
 
     create_brewery(name, brewery_type, street, city, state, country, website, rate, comments, user_id)
     
-    redirect '/breweries/my_page'
+    redirect '/my_page'
 end
 
-get '/breweries/my_page' do
+get '/my_page' do
     breweries = all_breweries()
 
     erb :'/breweries/my_page', locals: {
-        breweries: breweries,
+        breweries: breweries
     }
+end
+
+get '/:id/edit' do
+    id = params['id']
+
+    brewery = get_brewery(id)
+
+    erb :'breweries/edit', locals: {
+        brewery: brewery
+    }
+end
+
+put '/:id' do
+    rate = params['rate']
+    comments = params['comments']
+    id = params['id']
+
+    update_brewery(rate, comments, id)
+
+    redirect '/my_page'
+
+end
+
+delete '/:id' do
+    id = params['id']
+
+    delete_brewery(id)
+
+    redirect '/my_page'
 end

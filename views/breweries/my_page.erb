@@ -23,8 +23,22 @@
     <p>Rate: <%= brewery['rate'] %></p>
     <p>Comments: <%= brewery['comments'] %></p>
 
-    <a href="">Edit</a>
-    <form action="">
+    <form action="/<%= brewery['id'] %>/edit">
+        <input type="hidden" name="name" value="<%= brewery['name'] %>">
+        <input type="hidden" name="brewery_type" value="<%= brewery['brewery_type'] %>">
+        <input type="hidden" name="street" value="<%= brewery['street'] %>">
+        <input type="hidden" name="city" value="<%= brewery['city'] %>">
+        <input type="hidden" name="state" value="<%= brewery['state'] %>">
+        <input type="hidden" name="country" value="<%= brewery['country'] %>">
+        <input type="hidden" name="website" value="<%= brewery['website'] %>">
+        <input type="hidden" name="rate" value="<%= brewery['rate'] %>">
+        <input type="hidden" name="comments" value="<%= brewery['comments'] %>">
+
+        <button>Edit</button>
+    </form>
+
+    <form action="/<%= brewery['id'] %>" method ="POST">
+        <input type="hidden" name="_method" value="delete">
         <button>Delete</button>
     </form>
 <% end %>
