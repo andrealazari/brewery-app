@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+.container-flex {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* INDEX SECTION */
+.index {
+    width: 30%;
+}
+
+.index h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.index-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.index a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: rgb(247, 194, 3);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 20px;
+    min-width: 100px;
+}
+
+/* SIGN-UP / LOGIN SECTION */
+.sign-up, 
+.login {
+    width: 50%;
+    text-align: center;
+}
+
+.sign-up form, 
+.login form ,
+.search form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.sign-up input, 
+.login input,
+.search input {
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.sign-up button, 
+.login button,
+.search button {
+    margin: 20px auto;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    background-color: rgb(247, 194, 3);
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+/* MY PAGE SECTION */
+
+/* .my-page {
+    height: 100vh;
+} */
+
+.my-page header,
+.feed header,
+.search header {
+    text-align: center;
+}
+
+.my-page nav,
+.feed nav,
+.search nav {
+    margin-top: 30px;
+}
+
+.my-page ul,
+.feed ul,
+.search ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.my-page li,
+.feed li,
+.search li {
+    list-style: none;
+}
+
+.my-page a,
+.feed a,
+.search a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: rgb(247, 194, 3);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+.my-page article,
+.feed article,
+.search article {
+    border: 1px solid black;
+    padding: 20px 30px;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.my-page .breweries {
+    border: 1px solid blue;
+    padding: 20px 30px;
+    width: 300px;
+    margin: 50px auto;
+
+}
+

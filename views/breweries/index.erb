@@ -1,21 +1,11 @@
-<h1>Brewery App</h1>
-<% if logged_in? %>
-    <h2 class="hello">Hello <%= current_user['name'] %>!</h2>
+<section class="container-flex">
+    <section class="index">
+        <h1>Brewery App</h1>
 
-    <form action="/sessions" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <button>Logout</button>
-    </form>
-    
-    <nav>
-        <ul>
-            <li><a href="/search">Search</a></li>
-            <li><a href="/my_page">My Breweries</a></li>
-            <li><a href="/brewery_feed">Brewery Feed</a></li>
-        </ul>
-    </nav>
+        <section class="index-links">
+            <a href="/login">Login</a>
+            <a href="/signup">Sign up</a>
+        </section>
 
-<% else %>
-    <a href="/login">Login</a>
-    <a href="/signup">Sign up</a>
-<% end %>
+    </section>
+</section>
