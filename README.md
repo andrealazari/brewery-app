@@ -2,7 +2,7 @@
 
 ## Summary of Project
 
-Full-stack database backed application for locate and save breweries.
+Full-stack database backed application for locate and save breweries. Check out the [Brewery App](https://my-brewery-app.herokuapp.com/).
 API from [Beer Mapping](https://beermapping.com/api/) or [Open Brewery DB](https://www.openbrewerydb.org/d).
 
 ## Plan
