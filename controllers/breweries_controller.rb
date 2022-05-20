@@ -30,8 +30,8 @@ post '/add' do
 end
 
 get '/my_page' do
-    # user_id = current_user['id']
-    user_id = 6
+    user_id = current_user['id']
+    # user_id = 22
     breweries = all_breweries_from_current_user(user_id)
 
     erb :'/breweries/my_page', locals: {

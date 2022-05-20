@@ -22,7 +22,6 @@ post '/user' do
             break
         else
             create_user(name, email, password)
-
             redirect '/my_page'
         end
     end
