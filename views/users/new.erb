@@ -1,16 +1,17 @@
 <section class="container-flex">
     <section class="sign-up">
-        <h1>Sign up</h1>
+        <h1>Brewery App</h1>
+        <h2>Sign up</h2>
         <p><%= sign_up_message %></p>
         <form action="/user" method="POST">
-            <label for="">Name: </label>
-            <input type="text" name="name">
+            <%# <label for="">Name: </label> %>
+            <input type="text" name="name" placeholder="Name:">
 
-            <label for="">Email: </label>
-            <input type="text" name="email">
+            <%# <label for="">Email: </label> %>
+            <input type="text" name="email" placeholder="Email::">
 
-            <label for="">Password: </label>
-            <input type="password" name="password">
+            <%# <label for="">Password: </label> %>
+            <input type="password" name="password" placeholder="Password:">
 
             <button>Cheers!</button>
 

@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Sora', sans-serif;
-    /* background-image: url(https://img.freepik.com/free-vector/beer-glasses-seamless-pattern-with-different-kinds-glasses-pulled-light-beers-malts-hand-drawing-white_1284-49325.jpg?t=st=1652957459~exp=1652958059~hmac=720dcd8479660f83cf10dbfdc2c14eaf6f7aae24054ee47f8789ca78b0d9a038&w=740); */
+    background-image: url(https://img.freepik.com/free-vector/beer-glasses-seamless-pattern-with-different-kinds-glasses-pulled-light-beers-malts-hand-drawing-white_1284-49325.jpg?t=st=1652957459~exp=1652958059~hmac=720dcd8479660f83cf10dbfdc2c14eaf6f7aae24054ee47f8789ca78b0d9a038&w=740);
 }
 
 .container-flex {
@@ -20,14 +20,16 @@ body {
 
 /* INDEX SECTION */
 .index {
-    width: 30%;
-    padding: 50px 0;
+    /* width: 30%; */
+    padding: 50px 10px;
+    margin: 0 10px;
     background-color: #263145;
     border-radius: 15px;
+    min-width: 30%
 }
 
 .index h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
     color: white;
@@ -45,21 +47,28 @@ body {
     text-align: center;
     color: #263145;
     background-color: #f8bb32;
+    box-shadow: 1px 1px white;
     padding: 0.5rem 1rem;
     border-radius: 3px;
-    font-size: 20px;
-    min-width: 100px;
+    font-size: 1rem;
+}
+
+.index p {
+    text-align: center;
+    color: white;
+    padding: 20px 20px;
 }
 
 /* SIGN-UP / LOGIN SECTION */
 .sign-up, 
 .login{
-    width: 30%;
     text-align: center;
-    background-color: #263145;
     color: #f8bb32;
-    padding-top: 20px;
+    padding: 50px 10px;
+    margin: 0 10px;
+    background-color: #263145;
     border-radius: 15px;
+    min-width: 350px;
 }
 
 .sign-up form, 
@@ -70,30 +79,52 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 300px;
-    font-size: 20px;
+    /* max-width: 300px; */
+    font-size: 1rem;
     margin-top: 20px;
+    padding: 0 10px;
 }
 
 .sign-up input, 
 .login input,
 .search input,
 .edit input {
-    font-size: 15px;
+    font-size: 1rem;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 .sign-up button, 
 .login button,
 .search button,
 .edit button {
-    margin: 20px auto;
     text-align: center;
-    padding: 0.5rem 2rem;
-    background-color: rgb(247, 194, 3);
+    color: #263145;
+    background-color: #f8bb32;
+    border: none;
+    box-shadow: 1px 1px white;
+    padding: 0.5rem 1rem;
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 1rem;
+    width: 50%;
+    margin: 20px auto 0 auto;
+}
+
+/* .sign-up label {
+    color: white;
+} */
+
+.sign-up h1 {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px #f8bb32;
+}
+
+.sign-up h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
 }
 
 /* MY PAGE SECTION */
