@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Sora', sans-serif;
-    background-image: url(https://img.freepik.com/free-vector/beer-glasses-seamless-pattern-with-different-kinds-glasses-pulled-light-beers-malts-hand-drawing-white_1284-49325.jpg?t=st=1652957459~exp=1652958059~hmac=720dcd8479660f83cf10dbfdc2c14eaf6f7aae24054ee47f8789ca78b0d9a038&w=740);
+    /* background-image: url(https://img.freepik.com/free-vector/beer-glasses-seamless-pattern-with-different-kinds-glasses-pulled-light-beers-malts-hand-drawing-white_1284-49325.jpg?t=st=1652957459~exp=1652958059~hmac=720dcd8479660f83cf10dbfdc2c14eaf6f7aae24054ee47f8789ca78b0d9a038&w=740); */
 }
 
 .container-flex {
@@ -157,14 +157,17 @@ body {
 .feed article,
 .search article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 155px;
+    width: 60%;
+    justify-content: center;
     margin: 0 auto;
 }
 
 .my-page .breweries,
-.feed .breweries {
+.feed .breweries,
+.search .breweries,
+.search-form{
     padding: 20px 30px;
     width: 300px;
     margin: 50px auto;

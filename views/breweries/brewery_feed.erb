@@ -29,7 +29,17 @@
                 <p>Website: <%= brewery['website'] %></p>
                 <p>Rate: <%= brewery['rate'] %></p>
                 <p>Comments: <%= brewery['comments'] %></p>
+
+                <form action="/like" method="POST">
+                    <input type="hidden" name="post_like" value="<%= brewery['id'] %>">
+                    <% if breweries_likes[brewery['id']] != nil %>
+                        <p><%= breweries_likes[brewery['id']]%></p>
+                    <% end %>
+                    <button>Like</button>
+                </form>
             </section>
+
+            
         <% end %>
     </article>
 

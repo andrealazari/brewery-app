@@ -6,7 +6,7 @@ Full-stack database backed application for locate and save breweries.<br />
 
 Check out the [Brewery App](https://my-brewery-app.herokuapp.com/).<br />
 
-API from [Open Brewery DB](https://www.openbrewerydb.org/d).
+API from [Open Brewery DB](https://www.openbrewerydb.org/).
 
 ## How it works
 
@@ -31,3 +31,7 @@ They can also check out other users reviews in a feed.
 ## Tech Stack
 
 Ruby, Sinatra, HTML, CSS
+
+## Future plan
+
+Implemente a bigger database with breweries around the world.

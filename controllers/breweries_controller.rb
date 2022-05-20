@@ -33,9 +33,11 @@ get '/my_page' do
     user_id = current_user['id']
     # user_id = 22
     breweries = all_breweries_from_current_user(user_id)
+    breweries_likes = count_likes(get_post_likes())
 
     erb :'/breweries/my_page', locals: {
-        breweries: breweries
+        breweries: breweries,
+        breweries_likes: breweries_likes
     }
 end
 
@@ -71,8 +73,13 @@ end
 get '/brewery_feed' do
     user_id = current_user['id']
     breweries = all_breweries_from_other_users(user_id)
+    breweries_likes = count_likes(get_post_likes())
+
 
     erb :'breweries/brewery_feed', locals: {
         breweries: breweries,
+        breweries_likes: breweries_likes
     }
 end
+
+

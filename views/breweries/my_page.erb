@@ -54,6 +54,9 @@
                     <input type="hidden" name="_method" value="delete">
                     <button>Delete</button>
                 </form>
+                <% if breweries_likes[brewery['id']] != nil %>
+                    <p><%= breweries_likes[brewery['id']]%></p>
+                <% end %>
             </section>
         <% end %>
     </article>

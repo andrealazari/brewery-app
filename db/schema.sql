@@ -22,3 +22,9 @@ CREATE TABLE breweries(
     comments TEXT,
     user_id INT
 );
+
+CREATE TABLE post_likes(
+    id SERIAL PRIMARY KEY,
+    brewery_id INT,
+    user_id INT
+);

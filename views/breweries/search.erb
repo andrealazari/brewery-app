@@ -17,7 +17,7 @@
     </nav>
 
 
-    <form action="/search">
+    <form class="search-form" action="/search">
         <label for="">Brewery Name:</label>
         <input type="text" name="name">
 
@@ -44,16 +44,8 @@
                     <input type="hidden" name="country" value="<%= brewery['country'] %>">
                     <input type="hidden" name="website" value="<%= brewery['website'] %>">
                     <label for="">Rate:</label>
-                    <select name="rate">
-                        <option value="5">5</option>
-                        <option value="6">6</option> 
-                        <option value="7">7</option> 
-                        <option value="8">8</option> 
-                        <option value="9">9</option> 
-                        <option value="10">10</option>     
-                    </select>
+                    <input type="number" min="0" max="10" name="rate">
                     <input type="text" name="comments" placeholder="Add a comment">
-                    <%# <textarea name="comments" cols="30" rows="2" placeholder="Add a comment"></textarea> %>
                     <button>Add</button>
                 </form>
             </section>
