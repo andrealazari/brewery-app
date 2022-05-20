@@ -17,3 +17,7 @@ end
 def find_user_by_id(id)
     run_sql("SELECT * FROM users WHERE id = $1", [id])[0]
 end
+
+def all_users_emails_created()
+    run_sql("SELECT email FROM users")
+end
