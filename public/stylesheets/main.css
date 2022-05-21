@@ -19,8 +19,7 @@ body {
 }
 
 /* INDEX SECTION */
-.index {
-    /* width: 30%; */
+    .index {
     padding: 50px 10px;
     margin: 0 10px;
     background-color: #263145;
@@ -51,9 +50,11 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 3px;
     font-size: 1rem;
+    font-weight: bold;
 }
 
-.index p {
+.index p,
+.login p{
     text-align: center;
     color: white;
     padding: 20px 20px;
@@ -73,13 +74,11 @@ body {
 
 .sign-up form, 
 .login form ,
-.search form,
-.edit form{
+.search form{
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* max-width: 300px; */
     font-size: 1rem;
     margin-top: 20px;
     padding: 0 10px;
@@ -110,124 +109,316 @@ body {
     font-size: 1rem;
     width: 50%;
     margin: 20px auto 0 auto;
+    font-weight: bold;
 }
 
-/* .sign-up label {
-    color: white;
-} */
-
-.sign-up h1 {
+.sign-up h1,
+.login h1 {
     font-size: 2rem;
     color: white;
     text-shadow: 1px 1px #f8bb32;
 }
 
-.sign-up h2 {
+.sign-up h2,
+.login h2 {
     font-size: 1.5rem;
-    margin-top: 20px;
 }
 
-/* MY PAGE SECTION */
-
-.my-page header,
-.feed header,
-.search header,
-.edit header {
-    text-align: center;
-    background-color: #263145;
-    color: #f8bb32;
-    padding: 30px 0;
-}
+/* OTHER SECTIONS */
 
 .my-page h2,
 .feed h2,
 .search h2,
 .edit h2 {
-    font-size: 20px;
-}
-
-
-.my-page nav,
-.feed nav,
-.search nav,
-.edit nav {
-    margin-top: 30px;
-}
-
-.my-page ul,
-.feed ul,
-.search ul,
-.edit ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-}
-
-.my-page li,
-.feed li,
-.search li,
-.edit li {
-    list-style: none;
-}
-
-.my-page a,
-.feed a,
-.search a,
-.edit a {
-    text-decoration: none;
     text-align: center;
-    color: black;
-    background-color: rgb(247, 194, 3);
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
-    font-size: 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #263145;
+    padding-bottom: 5px;
 }
 
 .my-page article,
 .feed article,
 .search article {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    column-gap: 155px;
-    width: 60%;
+    width: 80%;
     justify-content: center;
     margin: 0 auto;
 }
 
-.my-page .breweries,
-.feed .breweries,
-.search .breweries,
-.search-form{
+.breweries{
     padding: 20px 30px;
-    width: 300px;
+    width: 100%;
     margin: 50px auto;
     background-color: #263145;
     color: #f8bb32;
     border-radius: 15px;
+    text-align: center;
 
 }
 
-.my-page .brew-info p {
-    padding: 5px 0;
-}
-
-.my-page .review {
-    background-color: white;
+.breweries button {
     color: #263145;
+    background-color: #f8bb32;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.brew-info h3 {
+    padding: 10px 0;
+    color: white;
+}
+
+.brew-info p {
+    padding: 5px 0; 
+    color: white;
+}
+
+.brew-info span {
+    padding: 5px 0; 
+    color: #f8bb32;
+}
+
+.review {
+    text-align: start;
+    color: #f4f4f4;
     border-radius: 5px;
     padding: 5px 5px;
+    border-top: 3px solid white;
+    margin-top: 5px;
 }
 
-.my-page form {
+.review span {
+    color: #f8bb32;
+}
+
+.review p {
+    padding: 5px;
+}
+
+
+.review form {
+    display: flex;
+    flex-direction: row;
+}
+
+.my-page form{
     display: inline-block;
 }
 
-.my-page .logout button{
-    margin: 20px auto;
-    text-align: center;
-    padding: 0.5rem 2rem;
-    background-color: rgb(247, 194, 3);
-    border-radius: 3px;
-    font-size: 20px;
+.likes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border-top: 3px solid white;
 }
+
+.review-edit{
+    border-top: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.edit-form form {
+    background-color: #263145;
+    border-radius: 15px;
+    color: white;
+    padding: 40px 20px;
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.edit-form input {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.edit-form button {
+    width: 100px;
+}
+
+
+
+/* HEADER */
+.header {
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    background-color: #263145;
+    color: #f8bb32;
+    padding: 30px 0 30px 0;
+}
+
+.header a,
+.header button{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #263145;
+    background-color: #f8bb32;
+    border: 1px solid #263145;
+    box-shadow: 1px 1px white;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.header a:hover,
+.header button:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    padding: 0 20px;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px #f8bb32;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    margin: 0 20px;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #f8bb32;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #f8bb32;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+    display: block;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 915px) {
+    .header {
+        height: 100px;
+    }
+
+    .header li {
+        float: left;
+    }
+    .header li a,
+    .header li button {
+        padding: 10px 0;
+        text-decoration: none;
+        text-align: center;
+        color: #263145;
+        background-color: #f8bb32;
+        border: none;
+        box-shadow: 1px 1px white;
+        border-radius: 3px;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 140px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    .my-page article,
+    .feed article,
+    .search article {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    .edit-form form {
+        background-color: #263145;
+        border-radius: 15px;
+        color: white;
+        padding: 40px 20px;
+        width: 40%;
+        margin: 50px auto;
+        text-align: center;
+    }
+}
+  

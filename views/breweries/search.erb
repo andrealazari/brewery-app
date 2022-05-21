@@ -1,53 +1,58 @@
 <section class="search">
-    <header>
-        <h1>Brewery App</h1>
-        <h2>Hello <%= current_user['name'] %></h2>
-        <form action="/sessions" method="POST">
-            <input type="hidden" name="_method" value="delete">
-            <button>Logout</button>
-        </form>
-    </header>
-
-    <nav>
-        <ul>
+    <header class="header">
+        <h1 class="logo">Brewery App</h1>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
             <li><a href="/search">Search</a></li>
             <li><a href="/my_page">My Breweries</a></li>
-            <li><a href="/brewery_feed">Brewery Feed</a></li>
+            <li><a href="/brewery_feed">Mates Feed</a></li>
+            <li>
+                <form class="logout" action="/sessions" method="POST">
+                    <input type="hidden" name="_method" value="delete">
+                    <button>Logout</button>
+                </form>
+            </li>
         </ul>
-    </nav>
+    </header>
 
+    <h2>Hello, <%= current_user['name'] %>!</h2>
 
-    <form class="search-form" action="/search">
-        <label for="">Brewery Name:</label>
-        <input type="text" name="name">
+    <section class="edit-form">
+        <form class="search-form" action="/search">
+            <label for="">Brewery Name:</label>
+            <input type="text" name="name">
 
-        <button>Search</button>
-    </form>
+            <button>Search</button>
+        </form>
+    </section>
 
     <article>
-        <section class="breweries">
-            <% brewery_info.each do |brewery| %>
-
-                <p><%= brewery['name'] %></p>
-                <p><%= brewery['brewery_type'] %></p>
-                <p><%= brewery['street'] %></p>
-                <p><%= brewery['city'] %></p>
-                <p><%= brewery['state'] %></p>
-                <p><%= brewery['country'] %></p>
-                <p><%= brewery['website'] %></p>
-                <form action="/add" method="POST">
-                    <input type="hidden" name="name" value="<%= brewery['name'] %>">
-                    <input type="hidden" name="brewery_type" value="<%= brewery['brewery_type'] %>">
-                    <input type="hidden" name="street" value="<%= brewery['street'] %>">
-                    <input type="hidden" name="city" value="<%= brewery['city'] %>">
-                    <input type="hidden" name="state" value="<%= brewery['state'] %>">
-                    <input type="hidden" name="country" value="<%= brewery['country'] %>">
-                    <input type="hidden" name="website" value="<%= brewery['website'] %>">
-                    <label for="">Rate:</label>
-                    <input type="number" min="0" max="10" name="rate">
-                    <input type="text" name="comments" placeholder="Add a comment">
-                    <button>Add</button>
-                </form>
+        
+        <% brewery_info.each do |brewery| %>
+            <section class="breweries">
+                <section class="brew-info">
+                    <h3><%= brewery['name'] %></h3>
+                    <p><span>Type: </span><%= brewery['brewery_type'] %></p>
+                    <p><span>Street: </span><%= brewery['street'] %></p>
+                    <p><span>City: : </span><%= brewery['city'] %></p>
+                    <p><span>State: : </span><%= brewery['state'] %></p>
+                    <p><span>Cpuntry: </span><%= brewery['country'] %></p>
+                </section>
+                <section class="search-form">
+                    <form action="/add" method="POST">
+                        <input type="hidden" name="name" value="<%= brewery['name'] %>">
+                        <input type="hidden" name="brewery_type" value="<%= brewery['brewery_type'] %>">
+                        <input type="hidden" name="street" value="<%= brewery['street'] %>">
+                        <input type="hidden" name="city" value="<%= brewery['city'] %>">
+                        <input type="hidden" name="state" value="<%= brewery['state'] %>">
+                        <input type="hidden" name="country" value="<%= brewery['country'] %>">
+                        <input type="hidden" name="website" value="<%= brewery['website'] %>">
+                        <input type="number" min="0" max="10" name="rate" placeholder="Rate:">
+                        <input type="text" name="comments" placeholder="Add a comment">
+                        <button>Add</button>
+                    </form>
+                </section>
             </section>
         <% end %>
     </article>

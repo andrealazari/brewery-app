@@ -31,7 +31,6 @@ end
 
 get '/my_page' do
     user_id = current_user['id']
-    # user_id = 22
     breweries = all_breweries_from_current_user(user_id)
     breweries_likes = count_likes(get_post_likes())
 

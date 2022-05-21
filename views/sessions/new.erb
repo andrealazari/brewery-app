@@ -1,15 +1,16 @@
 <section class="container-flex">
     <section class="login">
-        <h1>Login Details</h1>
+        <h1>Brewery App</h1>
+        <h2>Login Details</h2>
         <p><%= login_message %></p>
         <form action="/sessions" method="POST">
-            <label for="">Email:</label>
-            <input type="text" name="email">
+            <%# <label for="">Email:</label> %>
+            <input type="text" name="email" placeholder="Email:">
 
-            <label for="">Password:</label>
-            <input type="password" name="password">
+            <%# <label for="">Password:</label> %>
+            <input type="password" name="password" placeholder="Password:">
 
-            <button>Login</button>
+            <button>Cheers!</button>
         </form>
     </section>
 </section>
