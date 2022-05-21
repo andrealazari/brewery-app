@@ -2,7 +2,7 @@
 
 ## Summary of Project
 
-Full-stack database backed application for locate and save breweries.<br />
+Full-stack database backed application for locate and save breweries from USA.<br />
 
 Check out the [Brewery App](https://my-brewery-app.herokuapp.com/).<br />
 
@@ -27,6 +27,7 @@ They can also check out other users reviews in a feed.
 9. Display the select information
 10. The user should be able to edit and delete the selected information
 11. The user should be able to see all other users selected information
+12. The user can like other users posts.
 
 ## Tech Stack
 
