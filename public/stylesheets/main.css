@@ -73,8 +73,7 @@ body {
 }
 
 .sign-up form, 
-.login form ,
-.search form{
+.login form {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -97,7 +96,7 @@ body {
 
 .sign-up button, 
 .login button,
-.search button,
+.search-btn,
 .edit button {
     text-align: center;
     color: #263145;
@@ -239,6 +238,10 @@ body {
 
 .edit-form button {
     width: 100px;
+}
+
+.search {
+    height: 100vh;
 }
 
 
@@ -422,3 +425,9 @@ body {
     }
 }
   
+footer {
+    background: #263145;
+    padding: 10px;
+    color: #f4f4f4;
+    text-align: center;
+}
