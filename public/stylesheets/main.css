@@ -240,12 +240,6 @@ body {
     width: 100px;
 }
 
-.search {
-    height: 100vh;
-}
-
-
-
 /* HEADER */
 .header {
     width: 100%;
@@ -424,10 +418,14 @@ body {
         text-align: center;
     }
 }
-  
-footer {
+
+/* footer {
     background: #263145;
     padding: 10px;
     color: #f4f4f4;
     text-align: center;
-}
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+} */
