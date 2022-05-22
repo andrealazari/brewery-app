@@ -10,9 +10,9 @@ API from [Open Brewery DB](https://www.openbrewerydb.org/).
 
 ## How it works
 
-The users can sign-up, login and logout from their accounts. Once logged in, they can search for their favourite breweries and save it to their list.<br />
+The users can sign-up, login and logout from their accounts. Once logged in, they can search for their favourite breweries and save it to their list. At this moments there is only breweries from USA.<br />
 The users can add a comment and a rate.
-They can also check out other users reviews in a feed.
+They can also check out other users reviews and like it in a feed.
 
 ## Plan to make the app
 
@@ -33,6 +33,11 @@ They can also check out other users reviews in a feed.
 
 Ruby, Sinatra, HTML, CSS
 
+## Learned Lessons
+
+- SQL inner join
+
 ## Future plan
 
-Implemente a bigger database with breweries around the world.
+- Implement a bigger database with breweries around the world.
+- Add automatic login after sign up.
