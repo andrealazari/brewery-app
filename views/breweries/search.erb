@@ -47,10 +47,11 @@
                         <input type="hidden" name="city" value="<%= brewery['city'] %>">
                         <input type="hidden" name="state" value="<%= brewery['state'] %>">
                         <input type="hidden" name="country" value="<%= brewery['country'] %>">
-                        <input type="hidden" name="website" value="<%= brewery['website'] %>">
-                        <input type="number" min="0" max="10" name="rate" placeholder="Rate:">
-                        <input type="text" name="comments" placeholder="Add a comment">
-                        <button>Add</button>
+                        <section class="comments">
+                            <input type="number" min="0" max="10" name="rate" placeholder="Rate:">
+                            <input type="text" name="comments" placeholder="Add a comment">
+                            <button>Add</button>
+                        </section>
                     </form>
                 </section>
             </section>

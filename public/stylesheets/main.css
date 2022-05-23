@@ -240,6 +240,11 @@ body {
     width: 100px;
 }
 
+section.comments {
+    display: flex;
+    flex-direction: column;
+}
+
 /* HEADER */
 .header {
     width: 100%;
